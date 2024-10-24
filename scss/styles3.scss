@@ -1,0 +1,284 @@
+/* Globales */
+$color_blanco: #fff;
+$color_azul:  blue;
+$color_rojo: red;
+$color_negro: black;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0 auto;
+    max-width: 1100px;
+    font-family: 'Lato';
+    color: #333;
+}
+
+.micarrito{
+    width: 60px;
+    height: 60px;
+    margin: 0px;
+    justify-content:flex-start;
+}
+
+.icon-cart{
+    width: 40px;
+    height: 40px;
+    stroke: $color_negro;
+}
+
+.icon-cart:hover{
+    cursor: pointer;
+}
+
+img{
+    height: 700px;
+    width: 150px;
+}
+
+.btn-add-cart{
+    height: 30px;
+    text-align: center;
+   
+}
+
+img.pequeña{
+    width: 5%;
+    height: 5%;
+}
+
+/* Header */
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    flex-wrap: wrap
+}
+
+.container-icon{
+    position: relative;
+}
+
+.count-products{
+    position: absolute;
+    top: 55%;
+    right: 0;
+    background-color: $color_azul;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+#contador-productos{
+    font-size: 12px;
+}
+
+.container-cart-products{
+    position: absolute;
+    top: 50px;
+    right: 0;
+
+    background-color:   $color_blanco;
+    width: 400px;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+    border-radius: 10px;
+}
+
+.cart-product{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+}
+
+.info-cart-product{
+    display: flex;
+    justify-content: space-between;
+    flex: 0.8;
+}
+
+.titulo-producto-carrito{
+    font-size: 20px;
+}
+
+.precio-producto-carrito{
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.cantidad-producto-carrito{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.icon-close{
+    width: 25px;
+    height: 25px;
+}
+
+.icon-close:hover{
+    stroke: red;
+    cursor: pointer;
+}
+
+.cart-total{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+}
+
+.cart-total h3{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.total-pagar{
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.hidden-cart{
+    display: none;
+}
+
+
+
+/* Main */
+.container-items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 120px;
+    row-gap: 30px;
+
+}
+
+.item{
+    border-radius: 20px; 
+    width: 260px;
+    border-style: solid;
+}
+
+.item:hover{
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
+
+.item img{
+    object-fit: cover;
+    border-radius: 10px 0px 0 0;
+    transition: all .5s;
+    display:block;
+    margin:auto;
+}
+
+img.milogo{
+    display: flex;
+    border-radius: 10px 10px 0 0;
+    transition: all .5s;
+    height: 100%;
+    width: 100%;
+}
+
+.item figure{
+    overflow: hidden;
+}
+
+.item:hover{
+    border-style: dashed;
+    border-color: $color_azul;
+
+}
+
+.item:hover img{
+    justify-content: center;
+    transform: scale(1.1);
+}
+
+.info-product{
+    padding: 15px 60px 1px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.price__c{
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.info-product button{
+    border: none;
+    background: none;
+    background-color: $color_azul;
+    color: #fff;
+    padding: 1px 1px;
+    cursor: pointer;
+    text-align:center;
+}
+
+.cart-empty{
+    padding: 20px;
+    text-align: center;
+}
+
+
+.hidden{
+    display: none;
+}
+
+div.item{
+    height: 300px;
+}
+
+h2{
+    font-size: 20px;
+    font-weight: bold; 
+    
+}
+
+h2, p{
+    height: 33px;
+}
+
+.price__a, .price__b, .price__c, .price__d{
+   color: $color_azul; 
+}
+
+  /* On screens that are 600px or less, tablet */
+  @media screen and (max-width: 992px) {
+    .container-items {
+        display: grid;
+        grid-template-columns: auto auto;        
+        justify-content: center;
+    }
+  }
+  
+  /* On screens that are 600px or less, celular */
+  @media screen and (max-width: 600px) {
+    .container-items {
+        display: grid;
+        grid-template-columns: auto ; 
+        justify-content: center;
+
+    }
+}
+
+
+
+
